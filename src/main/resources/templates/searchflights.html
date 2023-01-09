@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Flights</title>
+
+  <style>
+    body{
+      background-color: lightgreen;
+    }
+    .center {
+      margin: auto;
+      width: 70%;
+      border: 3px solid seagreen;
+      padding: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: darkgreen; /* Green */
+      color: white;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class = "center">
+  <form th:object="${flight}" th:action = "@{/api/flight/search}" method="post">
+    <p>Polazni aerodrom: <input type="text" th:field="*{polazniA}"/></p>
+    <p>Odredišni aerodrom: <input type="text" th:field="*{odredisniA}"/></p>
+    <p>Datum polaska: <input type="datetime-local" th:field="*{datumPolaska}"/></p>
+    <p>Datum polaska: <input type="datetime-local" th:field="*{datumPovratka}"/></p>
+    <p>Broj putnika: <input type="number" th:field="*{brPutnika}"/></p>
+    <p>Valuta: <input type="text" th:field="*{valuta}"/></p>
+    <button>Search</button>
+  </form>
+</div>
+
+</body>
+</html>
