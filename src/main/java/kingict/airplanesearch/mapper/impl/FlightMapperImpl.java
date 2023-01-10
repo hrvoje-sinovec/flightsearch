@@ -24,7 +24,7 @@ public class FlightMapperImpl implements FlightMapper {
         flight.setDatumPolaska(depart.getAt());
         flight.setDatumPovratka(arriveDate.getAt());
         flight.setBrPutnika(flight.getBrPutnika());
-        flight.setBrDostSjedala((long) flightOfferSearch.getNumberOfBookableSeats());
+//        flight.setBrDostSjedala((long) flightOfferSearch.getNumberOfBookableSeats());
         flight.setUkupnaCijena(flightOfferSearch.getPrice().getTotal());
         flight.setValuta(flightOfferSearch.getPrice().getCurrency());
 

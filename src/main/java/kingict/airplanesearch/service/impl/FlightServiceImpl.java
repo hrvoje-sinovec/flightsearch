@@ -35,7 +35,7 @@ public class FlightServiceImpl implements FlightService {
         List<Flight> flights = new ArrayList<>();
         flights.removeAll(flights);
 
-        //try catch block da ulovi exception ako ne postoji taj flight
+        //try catch block da ulovi exception ako ne postoji taj flight ili krivo upisani parametri
         try {
 
             //pretraga flightova po parametrima danim na frontendu
@@ -86,7 +86,8 @@ public class FlightServiceImpl implements FlightService {
                     }
                 }
 
-                returnFlight.setBrPutnika((long) (brSeg / 2) - 1);
+                returnFlight.setBrDostSjedala((long) (brSeg / 2) - 1);
+                returnFlight.setBrPutnika(flight.getBrPutnika());
                 returnFlight.setOpis(flightOfferSearch.getSource());
                 mapper.map(returnFlight, flightOfferSearch, departSegments.get(0), arrival, arriveSegments.get(arriveSegments.size() - 1));
 
@@ -104,7 +105,7 @@ public class FlightServiceImpl implements FlightService {
             System.err.println("Ne postoji taj flight: " +
                     flight.getPolazniA() + " > " + flight.getOdredisniA());
         } catch (com.amadeus.exceptions.ClientException e) {
-            System.err.println("IATa kod mora imati 3 slova." + e.getMessage());
+            System.err.println("Krivi upis: Client Exception:" + e.getMessage());
         }
         //vraća listu flightova koji odgovaraju parametrima
         return flights;

@@ -51,15 +51,15 @@
   </thead>
   <tbody>
   <tr th:if="${flights.empty}">
-    <td colspan="3">No flights available</td>
+    <td colspan="3">No flights available / wrong parameters typed</td>
   </tr>
   <tr th:each="flight:${flights}">
     <td><span th:text = "${flight.polazniA}"></span></td>
     <td><span th:text = "${flight.odredisniA}"></span></td>
     <td><span th:text = "${flight.datumPolaska}"></span></td>
     <td><span th:text = "${flight.datumPovratka}"></span></td>
-    <td><span th:text = "${flight.brPutnika}"></span></td>
     <td><span th:text = "${flight.brDostSjedala}"></span></td>
+    <td><span th:text = "${flight.brPutnika}"></span></td>
     <td><span th:text = "${flight.ukupnaCijena}"></span></td>
     <td><span th:text = "${flight.valuta}"></span></td>
   </tr>
