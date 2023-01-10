@@ -1,4 +1,7 @@
 # flightsearch
+---
+ISPRAVAK: Sve radi, aplikacija se pokreće adresom http://localhost:7000/api/flight/search
+---
 searchflights html ne radi, tako da poziv zovem preko postmana, POST input raw JSON body : 
 Primjer:
 {
@@ -9,6 +12,8 @@ Primjer:
     "brPutnika": 4,
     "valuta": "EUR"
 }
+
+---
 
 Stavio sam da se ispisuju svi mogući rezultati, ako zbog testiranja zelite smanjiti koliko ih se pretražuje, u FlightServiceImpl odkomentirati ".and("max", zeljeni broj pretraga)"
 
