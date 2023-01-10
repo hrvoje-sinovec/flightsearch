@@ -19,10 +19,18 @@ public class FlightSearchController {
 
 
     @PostMapping("/search")
-    public String PostFlights(@RequestBody Flight flight, Model model) throws ResponseException {
+    public String PostFlights(@ModelAttribute Flight flight, Model model) throws ResponseException {
         model.addAttribute("flights", facade.getAll(flight));
         return "flightslist";
     }
+
+    @GetMapping("/search")
+    public String GetFlights(Model model){
+        model.addAttribute("flight", new Flight());
+        return "searchflights";
+    }
+
+
 
 }
 

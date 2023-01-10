@@ -38,8 +38,8 @@
   <form th:object="${flight}" th:action = "@{/api/flight/search}" method="post">
     <p>Polazni aerodrom: <input type="text" th:field="*{polazniA}"/></p>
     <p>Odredišni aerodrom: <input type="text" th:field="*{odredisniA}"/></p>
-    <p>Datum polaska: <input type="datetime-local" th:field="*{datumPolaska}"/></p>
-    <p>Datum polaska: <input type="datetime-local" th:field="*{datumPovratka}"/></p>
+    <p>Datum polaska: <input type="date" th:field="*{datumPolaska}"/></p>
+    <p>Datum polaska: <input type="date" th:field="*{datumPovratka}"/></p>
     <p>Broj putnika: <input type="number" th:field="*{brPutnika}"/></p>
     <p>Valuta: <input type="text" th:field="*{valuta}"/></p>
     <button>Search</button>
