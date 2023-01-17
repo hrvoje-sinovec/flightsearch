@@ -30,7 +30,9 @@ public class FlightSearchController {
         return "searchflights";
     }
 
-
-
+    @PostMapping("/create")
+    public void save(Flight flight){
+        facade.save(flight);
+    }
 }
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>New Student</title>
+
+  <style>
+    body{
+      background-color: lightgreen;
+    }
+    .center {
+      margin: auto;
+      width: 70%;
+      border: 3px solid seagreen;
+      padding: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: darkgreen; /* Green */
+      color: white;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class = "center">
+  <form th:object="${user}" th:action = "@{/api/user/register}" method="post">
+    <p>Firstname: <input type="text" th:field="*{firstname}"/></p>
+    <p>Lastname: <input type="text" th:field="*{lastname}"/></p>
+    <p>Password: <input type="text" th:field="*{password}"/></p>
+
+    <button>Save</button>
+  </form>
+</div>
+
+</body>
+</html>
