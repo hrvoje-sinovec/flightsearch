@@ -31,7 +31,7 @@ public class FlightServiceImpl implements FlightService {
 
 ---
 
-Baza se kreira u http://localhost:7000/h2-console/
+Baza se pristupa u http://localhost:7000/h2-console/
 
 username: root
 
