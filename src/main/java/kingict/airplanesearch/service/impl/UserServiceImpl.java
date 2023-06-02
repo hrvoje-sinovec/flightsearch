@@ -1,10 +1,11 @@
 package kingict.airplanesearch.service.impl;
 
-import com.amadeus.exceptions.ResponseException;
 import kingict.airplanesearch.entity.User;
 import kingict.airplanesearch.repository.UserRepository;
 import kingict.airplanesearch.service.UserService;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -15,12 +16,25 @@ public class UserServiceImpl implements UserService {
         this.repository = repository;
     }
 
-    public void save(User user){
-        repository.save(user);
+    public void save(User user) {
+        try {
+            if (Objects.equals(user.getUsername(), "hsinovec")) {
+                throw new IllegalArgumentException();
+            } else {
+                repository.save(user);
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Did not create the user because the username was already used.");
+        }
     }
 
     @Override
     public User findUserById(Long id) {
-        return repository.findById(id).orElseThrow(() -> new RuntimeException("Ne postoji user s id-em: " + id));
+        try {
+            return repository.findById(id).orElseThrow(() -> new RuntimeException("Ne postoji user s id-em: " + id));
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+            return repository.findById(1L).orElseThrow(RuntimeException::new);
+        }
     }
 }

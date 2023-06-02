@@ -40,4 +40,6 @@ public class Flight {
     @Column(name = "OPIS")
     private String opis;
 
+    private Integer brLetova;
+
 }

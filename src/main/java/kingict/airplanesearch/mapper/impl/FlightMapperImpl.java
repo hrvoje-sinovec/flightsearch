@@ -1,7 +1,6 @@
 package kingict.airplanesearch.mapper.impl;
 
 import com.amadeus.resources.FlightOfferSearch;
-import kingict.airplanesearch.dto.FlightDto;
 import kingict.airplanesearch.entity.Flight;
 import kingict.airplanesearch.mapper.FlightMapper;
 import org.springframework.stereotype.Component;

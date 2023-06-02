@@ -56,7 +56,7 @@
   <tr th:each="flight:${flights}">
     <td><span th:text = "${flight.polazniA}"></span></td>
     <td><span th:text = "${flight.odredisniA}"></span></td>
-    <td><span th:text = "${flight.datumPolaska}"></span></td>
+    <td><span th:text = "${flight.datumPolaska} | date:'yyyy-MM-dd'"></span></td>
     <td><span th:text = "${flight.datumPovratka}"></span></td>
     <td><span th:text = "${flight.brDostSjedala}"></span></td>
     <td><span th:text = "${flight.brPutnika}"></span></td>

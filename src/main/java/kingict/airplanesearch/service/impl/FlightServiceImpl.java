@@ -45,7 +45,7 @@ public class FlightServiceImpl implements FlightService {
                             .and("departureDate", flight.getDatumPolaska())
                             .and("returnDate", flight.getDatumPovratka())
                             .and("adults", flight.getBrPutnika())
-//                            .and("max", 5)
+                            .and("max", flight.getBrLetova())
                             .and("currencyCode", flight.getValuta()));
 
             System.out.println(flightOfferSearches);

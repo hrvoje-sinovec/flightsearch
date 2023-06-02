@@ -19,4 +19,6 @@ public class FlightDto {
     private String ukupnaCijena;
 
     private String valuta;
+
+    private Integer brLetova;
 }

@@ -1,7 +1,6 @@
 package kingict.airplanesearch.service;
 
 import com.amadeus.exceptions.ResponseException;
-import com.amadeus.resources.FlightOfferSearch;
 import kingict.airplanesearch.entity.Flight;
 
 import java.util.List;
