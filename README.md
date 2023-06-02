@@ -13,26 +13,6 @@ Sve funkcije su dozvoljene samo adminu za sad.
 
 **Password:** 123
 
----
-
-Stavio sam da se ispisuju svi mogući rezultati, ako zbog testiranja zelite smanjiti koliko ih se pretražuje, u FlightServiceImpl odkomentirati **.and("max", zeljeni broj pretraga)**
-
-```java
-public class FlightServiceImpl implements FlightService {
-
-  //          FlightOfferSearch[] flightOfferSearches = amadeus.shopping.flightOffersSearch.get(
-  //                  Params.with("originLocationCode", flight.getPolazniA())
-  //                          .and("destinationLocationCode", flight.getOdredisniA())
-  //                          .and("departureDate", flight.getDatumPolaska())
-  //                          .and("returnDate", flight.getDatumPovratka())
-  //                          .and("adults", flight.getBrPutnika())
-                              .and("max", 5) 
-  //                          .and("currencyCode", flight.getValuta()));
-            }
-```
-
----
-
 Baza se pristupa u http://localhost:7000/h2-console/
 
 username: root
