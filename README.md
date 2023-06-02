@@ -1,7 +1,9 @@
 # flightsearch
 
 ---
-ISPRAVAK: Dodao security i web pageve, aplikacija se pokreće adresom: http://localhost:7000
+ISPRAVAK: Aplikacija automatski pokreće adresu: http://localhost:7000
+
+Dodao security i web pageve, aplikacija se pokreće adresom: http://localhost:7000
 
 Sve funkcije su dozvoljene samo adminu za sad.
 
